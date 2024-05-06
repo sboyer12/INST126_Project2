@@ -3,6 +3,9 @@
 import os
 import random
 
+currentCWD = os.getcwd
+print(currentCWD)
+
 # this is the function that I have created to come up with my secret word and my word bank
 def word_bank():
     word_bank = ["raise", "scare", "point", "least", "trace"]
@@ -10,7 +13,7 @@ def word_bank():
 
 # this is going to be the function for the gameplay. It will include what is printed out and how the game goes along.
 def gameplay():
-    secretWord = word_bank # this is how the secret word is chosen
+    secretWord = word_bank # this is how the secret word is chosen it is also a call to the word_bank() function
     print("This is the word hunting game! \n")
     numberOfPlayers = int(input("Enter number of players: "))
     players = [f"Players {i + 1}" for i in range (numberOfPlayers)]
@@ -25,4 +28,15 @@ def gameplay():
             print(f"\n{player}'s turn:")
             guess = input("Enter a letter guess: ").lower()
 
+            # here we describe the guess function. This is to depict a guess inside of the function and to see if the player has guessed the correct letter
+            if guess in secretWord:
+                count = secretWord.count(guess)
+                print(f"The letter {guess} appears in the secret word {count} times in the secret word. \n")
+            else:
+                print(f"The letter {guess} does not appear in the secret word. \n")
+
+        letterGuesses[player] += 1
+
     
+    # this below is the function that we will use to run the game after it is over
+    gameplay()
