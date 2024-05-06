@@ -33,21 +33,20 @@ def gameplay():
                 else:
                     print(f"The letter {guess} does not appear in the secret word. \n")
                 
-
                 letterGuesses[player] += 1
-            else:
-                if guess == secretWord:
+            else: # here we describe the guess function. This is to depict a guess inside of the function and to see if the player has guessed the correct letter
+                if guess == secretWord: # this is the word guess section
                     print(f"Congrats! You have won the game because the secret word was {secretWord}! Play again soon!")
                     flag = False
                 if wordGuesses == 2:
                     print(f"Sorry the secret word was {secretWord}. You'll get it next time!")
                     flag = False
                 wordGuesses += 1
-            # here we describe the guess function. This is to depict a guess inside of the function and to see if the player has guessed the correct letter
+            
             
 
 
-        # this is the word guess section
+       
         
 
        # wordGuesses += 1
