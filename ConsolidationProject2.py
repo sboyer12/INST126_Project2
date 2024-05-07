@@ -13,18 +13,28 @@ def word_bank():
 def gameplay():
     secretWord = word_bank() # this is how the secret word is chosen it is also a call to the word_bank() function
     print("This is the word hunting game! \n")
+    
+   # while True:
+     #   try:
+       #     numberOfPlayers = int(input("Enter number of players: "))
+       #     if numberOfPlayers <= 0:
+        #        print("You must select a positive amount of players.")
+          #      continue
+        #    break
+       # except ValueError:
+         #   print("Invalid input please select a positive amount of players.") # from lines 17 to 24 I have tried to create a catch in case the user doesn't enter a number.
     while True:
         try:
             numberOfPlayers = int(input("Enter number of players: "))
             if numberOfPlayers <= 0:
-                print("You must select a positive amount of players.")
+                print("Number of players must be a positive integer.")
                 continue
             break
         except ValueError:
-            print("Invalid input please select a positive amount of players.")
+            print("Invalid input. Please enter a positive integer.")    
         
         
-        players = [f"Players {i + 1}" for i in range (numberOfPlayers)]
+    players = [f"Players {i + 1}" for i in range (numberOfPlayers)]
 
     # now I am going to create the variables for how we are going to track letter and word guesses
     letterGuesses = {player: 0 for player in players} # variable for letter guesses
