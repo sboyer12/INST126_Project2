@@ -13,8 +13,18 @@ def word_bank():
 def gameplay():
     secretWord = word_bank() # this is how the secret word is chosen it is also a call to the word_bank() function
     print("This is the word hunting game! \n")
-    numberOfPlayers = int(input("Enter number of players: "))
-    players = [f"Players {i + 1}" for i in range (numberOfPlayers)]
+    while True:
+        try:
+            numberOfPlayers = int(input("Enter number of players: "))
+            if numberOfPlayers <= 0:
+                print("You must select a positive amount of players.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input please select a positive amount of players.")
+        
+        
+        players = [f"Players {i + 1}" for i in range (numberOfPlayers)]
 
     # now I am going to create the variables for how we are going to track letter and word guesses
     letterGuesses = {player: 0 for player in players} # variable for letter guesses
