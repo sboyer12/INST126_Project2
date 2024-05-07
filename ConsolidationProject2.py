@@ -44,11 +44,6 @@ def gameplay():
                 wordGuesses += 1
             
             
-
-
-       
-        
-
        # wordGuesses += 1
     # this below is the function that we will use to run the game after it is over
 
@@ -56,8 +51,6 @@ def gameplay():
 def main():
     gameplay()
     
-    
-
 
 if __name__ == "__main__":
     main()
