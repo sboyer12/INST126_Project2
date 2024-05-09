@@ -3,10 +3,12 @@
 import os
 import random
 
+default_word_bank = ["raise", "scare", "point", "least", "trace"]
+
 # this is the function that I have created to come up with my secret word and my word bank
 
-def word_bank():
-    word_bank = ["raise", "scare", "point", "least", "trace"]
+def draw_from_word_bank(word_bank = default_word_bank):
+    """This gives a random word from my word bank"""
     return random.choice(word_bank)
 
 # this is going to be the function for the gameplay. It will include what is printed out and how the game goes along.
@@ -14,15 +16,7 @@ def gameplay():
     secretWord = word_bank() # this is how the secret word is chosen it is also a call to the word_bank() function
     print("This is the word hunting game! \n")
     
-   # while True:
-     #   try:
-       #     numberOfPlayers = int(input("Enter number of players: "))
-       #     if numberOfPlayers <= 0:
-        #        print("You must select a positive amount of players.")
-          #      continue
-        #    break
-       # except ValueError:
-         #   print("Invalid input please select a positive amount of players.") # from lines 17 to 24 I have tried to create a catch in case the user doesn't enter a number.
+ # from lines 17 to 26 I have tried to create a catch in case the user doesn't enter a number.
     while True:
         try:
             numberOfPlayers = int(input("Enter number of players: "))
@@ -68,9 +62,4 @@ def gameplay():
     # this below is the function that we will use to run the game after it is over
 
 
-def main():
-    gameplay()
     
-
-if __name__ == "__main__":
-    main()
