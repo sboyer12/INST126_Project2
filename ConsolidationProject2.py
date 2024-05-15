@@ -19,7 +19,6 @@ def gameplay():
     secretWord = draw_from_word_bank() # this is how the secret word is chosen it is also a call to the word_bank() function
     print("This is the word hunting game! \n")
 
-
  # from lines 17 to 26 I have tried to create a catch in case the user doesn't enter a number.
     while True:
         try:
@@ -65,8 +64,3 @@ def gameplay():
 
     # turn the information from the dictionary into a graph for the rest of your points
     
-    def main():
-        gameplay()
-    
-    if __name__ == "__main__":
-        main()
