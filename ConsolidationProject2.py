@@ -64,3 +64,17 @@ def gameplay():
 
     # turn the information from the dictionary into a graph for the rest of your points
     
+def addingTurnsToDictionary(player, players, letterGuesses):
+    if player in players.keys():
+        players[player] += letterGuesses
+    else:
+        players[player] = letterGuesses
+    
+    return None
+
+guessCountDictionary = {}
+    
+addingTurnsToDictionary(guessCountDictionary, player=0, letterGuesses=0)
+
+print(guessCountDictionary)
+
